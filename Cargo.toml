@@ -48,6 +48,3 @@ serde = [
 	"primitive-types/impl-serde",
 	"evm-interpreter/serde",
 ]
-
-[patch.crates-io]
-ethereum = { git = "https://github.com/CESSProject/ethereum.git", branch = "upgrade-ethereum-types" }

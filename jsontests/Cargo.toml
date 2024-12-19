@@ -10,7 +10,7 @@ keywords = { workspace = true }
 
 [dependencies]
 clap = { version = "4", features = ["derive"] }
-ethereum = "0.15.0"
+ethereum = { git = "https://github.com/CESSProject/ethereum.git", branch = "upgrade-ethereum-types" }
 evm = { path = ".." }
 evm-precompile = { path = "../precompile" }
 hex = { version = "0.4", features = ["serde"] }
