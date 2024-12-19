@@ -12,9 +12,7 @@ use crate::error::{ExitError, ExitFatal};
 /// Convert [U256] into [H256].
 #[must_use]
 pub fn u256_to_h256(v: U256) -> H256 {
-	let mut r = H256::default();
-	v.to_big_endian(&mut r[..]);
-	r
+	H256::from(v.to_big_endian())
 }
 
 /// Convert [H256] to [U256].

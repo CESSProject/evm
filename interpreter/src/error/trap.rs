@@ -274,9 +274,7 @@ impl CallTrapData {
 					&retbuf[..],
 				) {
 					Ok(()) => {
-						let mut value = H256::default();
-						U256::one().to_big_endian(&mut value[..]);
-						interpreter.machine_mut().stack.push(value)?;
+						interpreter.machine_mut().stack.push(H256::from(U256::one().to_big_endian()))?;
 
 						Ok(())
 					}

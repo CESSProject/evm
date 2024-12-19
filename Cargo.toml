@@ -27,7 +27,7 @@ keywords = { workspace = true }
 description = "Ethereum Virtual Machine"
 
 [dependencies]
-primitive-types = { version = "0.12", default-features = false, features = ["rlp"] }
+primitive-types = { version = "0.13", default-features = false, features = ["rlp"] }
 sha3 = { version = "0.10", default-features = false }
 
 evm-interpreter = { version = "1.0.0-dev", path = "interpreter", default-features = false }
@@ -48,3 +48,6 @@ serde = [
 	"primitive-types/impl-serde",
 	"evm-interpreter/serde",
 ]
+
+[patch.crates-io]
+ethereum = { git = "https://github.com/CESSProject/ethereum.git", branch = "upgrade-ethereum-types" }
